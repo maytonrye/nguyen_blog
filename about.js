@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbnail: "https://img.youtube.com/vi/432j-xQVmWU/0.jpg"
         },
         {
-            title: "chưa biết nữa",
-            url: "https://www.youtube.com/watch?v=5AQRQFIpjc0",
-            thumbnail: "https://img.youtube.com/vi/5AQRQFIpjc0/0.jpg"
+            title: "Principles of Human-Centered Design (Don Norman)",
+            url: "https://www.youtube.com/watch?v=rmM0kRf8Dbk0",
+            thumbnail: "https://img.youtube.com/vi/rmM0kRf8Dbk0/0.jpg"
         },
         {
             title: "Video 6 Title",
