@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography by Nguyen</title>
+    <link rel="icon" type="image/x-icon" href="site-brandings/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="photography.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <video id="loading-video" autoplay muted>
+            <source src="site-brandings/loading-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="site-brandings/logotrasenvang copy.png" alt="Logo" onclick="window.location.href='about.html';">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="thoughts.html">Thoughts</a></li>
+                <li><a href="photography.html" class="active">Photography</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="photography-page">
+        <div class="photography-container">
+            <!-- Left Column (Static and Sticky) -->
+            <div class="photography-left-column">
+                <h1 class="photography-title">Photography<br><span>by Nguyen.</span></h1>
+
+                <!-- Dropdown for Collections -->
+                <div class="photography-dropdown">
+                    <select id="collections-dropdown">
+                        <option value="">Select a collection</option>
+                    </select>
+                </div>
+
+                <!-- Collection Description -->
+                <p class="photography-description"></p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="photography-right-column" id="photos-container"></div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="photo-modal">
+        <span class="close-btn">&times;</span>
+        <img src="" alt="Zoomed Image">
+        <!-- Navigation Buttons -->
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="hydration">
+                <p>Stay hydrated! Matcha is a suggestion!</p>
+            </div>
+            <div class="copyright">
+                <p>© Nguyen Nguyen / 2024</p>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><a href="mailto:trung.nguyen@uni.minerva.edu" target="_blank"><img src="site-brandings/Email-logo.png" alt="Email"></a></li>
+                    <li><a href="https://www.instagram.com/mayton.rye/" target="_blank"><img src="site-brandings/Instagram-logo.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Wr7QPBkcK98" target="_blank"><img src="site-brandings/YouTube-logo.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

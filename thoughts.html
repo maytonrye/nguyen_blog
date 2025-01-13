@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Writings (Crafted) by Nguyen</title>
+    <link rel="icon" type="image/x-icon" href="site-brandings/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="thoughts.js"></script>
+
+    <!-- Fallback Meta Tags -->
+    <meta property="og:title" content="Default Blog Title" />
+    <meta property="og:image" content="site-brandings/default-thumbnail.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com/blog.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+        // Extract URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const postTitle = params.get('title') || 'Default Blog Title';
+        const iframeURL = params.get('iframeURL') || '';
+        const featuredImage = decodeURIComponent(params.get('image') || 'site-brandings/default-thumbnail.jpg');
+        const pageURL = window.location.href;
+
+        // Dynamically update meta tags
+        document.title = postTitle;
+        document.querySelector('meta[property="og:title"]').setAttribute('content', postTitle);
+        document.querySelector('meta[property="og:image"]').setAttribute('content', featuredImage);
+        document.querySelector('meta[property="og:url"]').setAttribute('content', pageURL);
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <video id="loading-video" autoplay muted>
+            <source src="site-brandings/loading-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="site-brandings/logotrasenvang copy.png" alt="Logo" onclick="window.location.href='about.html';">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="thoughts.html" class="active">Thoughts</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Title Section -->
+        <h1 class="title">
+            The Writings<br>
+            <span>(Crafted) by Nguyen.</span>
+        </h1>
+
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <button class="tab active" data-tab="on places i’ve been to">On Places I've Been To</button>
+            <button class="tab" data-tab="the little things of life">The Little Things Of Life</button>
+            <button class="tab" data-tab="Growing In This Crazy World">Growing In This Crazy World</button>
+            <button class="tab" data-tab="Some Pieces of Work">Some Pieces of Work</button>
+
+        </div>
+
+        <!-- Posts Container -->
+        <div id="posts-container" class="masonry-grid">
+            <p>Loading posts...</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="hydration">
+                <p>Stay hydrated! Matcha is a suggestion!</p>
+            </div>
+            <div class="copyright">
+                <p>© Nguyen Nguyen / 2024</p>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><a href="mailto:trung.nguyen@uni.minerva.edu" target="_blank"><img src="site-brandings/Email-logo.png" alt="Email"></a></li>
+                    <li><a href="https://www.instagram.com/mayton.rye/" target="_blank"><img src="site-brandings/Instagram-logo.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Wr7QPBkcK98" target="_blank"><img src="site-brandings/YouTube-logo.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

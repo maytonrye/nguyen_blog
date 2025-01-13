@@ -1,0 +1,1125 @@
+/* Basic Reset */
+body, h1, p, ul, li, a, img, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    border-bottom: 2px solid #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    vertical-align: middle; /* Fixes the extra spacing under the image */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #71706c;
+}
+
+
+
+
+
+
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background: rgb(255, 255, 255);
+    border-top: 1px solid #000000;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.hydration {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hydration img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-media a:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Thoughts - Title Section */
+.title {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1;
+    text-align: left;
+    padding-left: 50px;
+    margin: 30px 0 30px;
+    color: #000000;
+}
+
+.title span {
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+}
+
+/* Thoughts - Tabs Section */
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    padding-left: 50px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 0.5px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #ffffff;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tab.active {
+    background: #000000;
+    color: white;
+    border-color: #000000;
+}
+
+.tab:hover {
+    background: #000000;
+    color: white;
+}
+
+/* Thoughts - Masonry Grid Layout */
+.masonry-grid {
+    column-count: 5; /* Number of columns */
+    column-gap: 20px; /* Space between columns */
+    padding: 5px 50px;
+}
+
+.masonry-grid .post {
+    break-inside: avoid; /* Prevent posts from breaking across columns */
+    margin-bottom: 20px; /* Space between rows */
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: inline-block; /* Ensure block-level consistency */
+}
+
+.masonry-grid .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.masonry-grid .post img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain the image's natural aspect ratio */
+    display: block;
+    margin-bottom: 0;
+    object-fit: cover; /* Ensure no distortions */
+}
+
+.masonry-grid .post h3 {
+    padding: 10px; /* Add padding around the title */
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.masonry-grid .post p {
+    padding: 0px 10px 10px;
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+    .masonry-grid {
+        column-count: 3; /* Reduce columns for smaller screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .masonry-grid {
+        column-count: 2; /* Further reduce columns */
+    }
+}
+
+@media (max-width: 500px) {
+    .masonry-grid {
+        column-count: 1; /* Single column for mobile */
+    }
+}
+
+/* Thoughts - Blog Page Styling */
+.blog-main {
+    max-width: 820px; /* Restrict width for readability */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 20px; /* Add inner spacing */
+    background: #3244e3; /* Keep the existing background color */
+    box-shadow: none; /* Remove shadow */
+    border-radius: 0; /* Remove rounded corners for simplicity */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .blog-main {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 15px; /* Adjust padding for smaller devices */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Photography - Page Styles */
+.photography-container {
+    display: flex;
+    gap: 20px; /* Adjusted gap for better alignment */
+    margin: 30px;
+    align-items: flex-start;
+}
+
+/* Photography - Left Column (Static and Sticky, 25% width) */
+.photography-left-column {
+    flex-basis: 25%; /* Ensure it takes 25% of the width */
+    max-width: 25%; /* Enforce the maximum width to be 25% */
+    height: calc(100vh - 60px); /* Full viewport height minus header height */
+    overflow-y: auto; /* Allow internal scrolling */
+    padding: 20px;
+    position: sticky;
+    top: 100px; /* Offset for the sticky header */
+    background-color: #ffffff;
+    border-right: 1px solid #ffffff;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+/* Photography - Title Section (Sticky Inside Left Column) */
+.photography-title {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+    z-index: 10; /* Ensure it stays above other content */
+    padding-bottom: 10px;
+}
+
+/* Photography - Dropdown Menu */
+.photography-dropdown {
+    margin-top: 15px;
+}
+
+.photography-dropdown select {
+    width: 50%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    color: #444141;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    -webkit-appearance: none; /* Remove default arrow */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+}
+.photography-dropdown select:hover,
+.photography-dropdown select:focus {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Photography - Description Styling */
+.photography-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    margin-top: 20px;
+    word-wrap: break-word; /* Ensure text wraps to the next line */
+    overflow-wrap: break-word;
+    max-width: 100%; /* Prevent spilling outside the left column */
+}
+
+.photography-description {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.photography-description.fade-in {
+    opacity: 1;
+}
+
+/* Photography - Close Button */
+#photo-modal .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    border: none; /* Remove any background or borders */
+    background: none;
+    padding: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade-out and scale effect */
+}
+
+#photo-modal .close-btn:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+}
+
+#photo-modal .close-btn:active {
+    opacity: 0; /* Gradually disappear when clicked */
+    transform: scale(0.5); /* Shrink slightly for click feedback */
+}
+
+
+/* Photography - Right Column (Flexible, 75% width) */
+.photography-right-column {
+    flex-basis: 75%; /* Ensure it takes 75% of the width */
+    max-width: 75%; /* Enforce the maximum width */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box; /* Ensures padding does not break the layout */
+    overflow-y: auto; /* Enable scrolling for lazy loading */
+}
+
+/* Photography - Animation for Images */
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.photography-right-column img {
+    width: calc(100% - 20px); /* Adjust to include spacing */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1); /* Default scale after animation */
+    opacity: 0; /* Start invisible */
+    animation: fadeInZoom 1.5s ease forwards; /* Apply fade and zoom effect */
+    animation-delay: var(--delay, 0s); /* Stagger animations */
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure hover works smoothly */
+}
+
+/* Photography - Add Hover Effect */
+.photography-right-column img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Photography - Lazy Loading Effect for Gradual Scrolling */
+.photography-right-column img.lazy {
+    animation: none; /* Prevent animation for lazy-loaded images initially */
+    opacity: 0;
+    transform: scale(1.3);
+}
+
+/* Photography - Modal Styling */
+#photo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#photo-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+#photo-modal img.show {
+    opacity: 1; /* Make the image visible */
+}
+
+/* Photography - Modal Navigation Buttons */
+#photo-modal .prev-btn,
+#photo-modal .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#photo-modal .prev-btn {
+    left: 20px;
+}
+
+#photo-modal .next-btn {
+    right: 20px;
+}
+
+#photo-modal .prev-btn:hover,
+#photo-modal .next-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+    .photography-left-column {
+        flex-basis: 30%;
+        max-width: 30%;
+    }
+    .photography-right-column {
+        flex-basis: 70%;
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .photography-container {
+        flex-direction: column;
+    }
+
+    .photography-left-column {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .photography-right-column {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .photography-dropdown select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .photography-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+/* About Page Styling */
+
+/* General Reset */
+
+/* Import Custom Fonts */
+@font-face {
+    font-family: 'Lavonia';
+    src: url('fonts/Lavonia.otf') format('opentype'); 
+}
+@font-face {
+    font-family: 'BeVietnam';
+    src: url('fonts/BeVietnam.ttf') format('opentype'); 
+}
+@font-face {
+    font-family: 'Mencken';
+    src: url('fonts/Mencken.otf') format('opentype'); 
+}
+
+body, h1, p, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Snap Container */
+.snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 90vh;
+}
+
+.snap-slide {
+    scroll-snap-align: start;
+    height: 80vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* About Section Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 85vh;
+    padding: 0 0px;
+    align-items: center;
+}
+
+
+.left-title {
+    font-family: "Lavonia", serif;
+    font-size: 45px;
+    font-style: normal;
+    position: absolute;
+    top: 5%;
+    left: 40px;
+}
+
+.scroll-text {
+    font-family: "Lavonia", serif;
+    font-size: 30px;
+    font-style: normal;
+    position: absolute;
+    bottom: 1%;
+    left: 40px;
+    color: #000000;
+}
+
+.description {
+    font-family: "BeVietnam";
+    font-size: 15px;
+    grid-column: 2 / 3;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.signature {
+    margin-top: 10px;
+    text-align: right; /* Aligns text to the right */
+    font-style: italic;
+}
+
+.signature .name {
+    font-size: 30px; /* Default larger size for the name */
+    font-weight: bold; /* Bold text for emphasis */
+    font-family: 'Lavonia', sans-serif; /* Optional: Customize font */
+}
+
+.signature .location {
+    font-size: 14px; /* Smaller size for the location */
+    font-weight: normal; /* Normal weight for contrast */
+    font-family: 'Be Vietnam', sans-serif; /* Optional: Customize font */
+}
+.portrait-container {
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.portrait {
+    position: relative;
+    width: auto;
+    max-height: 100%;
+    overflow: hidden; /* Prevent any overflow */
+}
+
+.portrait img {
+    width: 100%; /* Matches container width */
+    max-height: 100%; /* Scales proportionally */
+    object-fit: cover; /* Ensures correct scaling */
+    transition: opacity 0.6s ease-in-out; /* Smooth fading effect */
+}
+
+.portrait img.default {
+    opacity: 1; /* Always fully visible */
+    z-index: 1; /* Stays below the hover image */
+    position: relative;
+}
+
+.portrait img.hover {
+    opacity: 0; /* Initially hidden */
+    z-index: 2; /* Stacked above the default image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.6s ease-in-out; /* Smooth fade-in effect */
+}
+
+.portrait:hover img.hover {
+    opacity: 1; /* Gradually fades in on hover */
+}
+
+.portrait:hover img.default {
+    opacity: 1; /* Default image remains visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travel Section */
+/* Travels Section Grid */
+/* Travels Section Grid */
+/* Travels Section Grid */
+.travels-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Three columns: Title, Magnets, Description */
+    gap: 0px; /* Spacing between columns */
+    padding-top: 100px;
+    align-items: start;
+}
+
+/* Masonry Magnet Grid - Horizontal Flow */
+/* Center Column: Masonry Magnet Grid */
+.magnets-grid {
+    padding: 0%;
+    column-count: 6; /* Number of columns */
+    column-gap: 0px; /* Space between columns */
+}
+
+.magnets-grid img {
+    width: 100%; /* Ensures images fill their container */
+    margin-bottom: 0px; /* Space between rows */
+    display: block; /* Ensures no inline spacing issues */
+    border-radius: 0px; /* Optional: Rounded corners */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0); /* Optional: Subtle shadow */
+    break-inside: avoid; /* Prevents breaking within columns */
+}
+
+
+
+/* Right Column: Travel Descriptions */
+.travels-right {
+    padding-right: 20px ;
+    text-align: justify;
+    font-family: "BeVietnam";
+    font-size: 13px;
+    line-height: 1.8;
+    color: #333;
+    word-wrap: break-word; /* Ensure long words wrap correctly */
+    overflow-wrap: break-word;
+}
+
+
+
+
+
+/* FAVICON */
+.favicon-image {
+    width: 48px; /* Adjust to desired size */
+    height: 48px;
+    border-radius: 50%; /* Makes it a circle */
+    overflow: hidden; /* Ensures the content is clipped */
+}
+
+
+/* Video-Making Section */
+/* Video Section Grid */
+/* Video-making Section */
+/* Video-making Section */
+/* Video-Making Section */
+/* Video-Making Section */
+/* Video-Making Section */
+/* Video-Making Section */
+.video-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 25% for title/scroll, 75% for carousel and description */
+    gap: 0px;
+    align-items: start;
+}
+
+/* Left Column: Title and Scroll */
+
+
+/* Right Column: Video Carousel and Description */
+.video-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Stack 1: Prev-Next Buttons */
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: -2px; /* Spacing between the buttons */
+    margin-bottom: 0px; /* Adjust this to bring the buttons closer to the video list */
+    padding-top: 5%; /* Ensure no extra padding is added */
+}
+
+/* Prev-Next Buttons */
+.prev-btn, .next-btn {
+    background: none;
+    border: none;
+    font-size: 18px; /* Adjust size for thinner appearance */
+    cursor: pointer;
+    color: #555; /* Neutral color */
+    padding: 5px;
+    font-weight: 200; /* Lighter font weight */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    color: #000; /* Highlight on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+    color: #ccc; /* Lighter color for disabled state */
+    cursor: not-allowed; /* Indicate non-functionality */
+}
+
+/* Stack 2: Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin-top: -10px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 204px; /* Fixed width for each video */
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    transition: transform 0.3s ease;
+}
+
+/* Ensures no underline appears on dynamically generated <a> tags */
+.carousel-item a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Makes the link inherit color from parent */
+}
+
+.carousel-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-family: "Be Vietnam", sans-serif;
+    color: #333;
+    text-align: left;
+    line-height: 1.4;
+}
+
+
+
+/* Stack 3: Description */
+.video-description {
+    font-size: 16px;
+    font-family: "Be Vietnam", sans-serif;
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.video-description a {
+    color: #663399;
+    text-decoration: none;
+}
+
+.video-description a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* code code code code code*/
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(10px); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeInUp-animation {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* LOADING LOADING LOADING PAGE PAGE PAGE */
+/* LOADING LOADING LOADING PAGE PAGE PAGE */
+/* LOADING LOADING LOADING PAGE PAGE PAGE */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s ease; /* Adjusted for 1-second fade-out */
+}
+
+#loading-screen video {
+    width: 70%; /* Adjust the size to fit your needs */
+    max-height: 80%;
+}
+
+
+
+
+/* AWARD AWARD AWARD */
+/* Styling for language tabs */
+/* Styling for the language toggle */
+/* Awards Section Layout */
+/* Awards Section Layout */
+/* Title Section */
+
+/* Awards List Container */
+.awards-list-container {
+    position: absolute;
+    top: 20%;
+    left: 40px;
+    max-width: 80%;
+    text-align: left;
+}
+
+/* Awards List */
+.awards-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "BeVietnam", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.awards-list li {
+    margin-bottom: 8px;
+}
+
+/* Language Tabs */
+.language-tabs {
+    position: flex;
+    left: 40px;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.language-tab {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #71706c;
+    transition: color 0.3s ease;
+}
+
+.language-tab.active {
+    color: #000000;
+}
+
+.language-tab:hover {
+    color: #000000;
+}
+
+ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0; /* Removes any default padding */
+    margin: 0; /* Removes any default margin */
+}
+
+ul ul {
+    margin-left: 20px; /* Adds indentation for nested lists */
+}
+
+/* Change the background and text color when highlighting */
+::selection {
+    background: #000000; /* Custom background color */
+    color: #ffffff; /* Custom text color */
+}
+
+
+
+
+
+/* Project Page Styling */
+/* Project Page Styling */
+/* Project Page Styling */
+/* Project Page Styling */
+/* Project Page Styling */
+/* Project Page Styling */
+
+
+
+h1.project-maincontent {
+    font-family: 'BeVietnam'; /* Set a clean, readable font */
+    font-size: 1.5rem; /* Adjust font size */
+    color:#403f48; /* Text color */
+    padding: 200px; /* Add some space inside */
+    text-align: left; /* Center-align the text */
+    max-width: 100%; /* Limit the width */
+    margin: 50px auto; /* Center it horizontally */
+    line-height: 1.3; /* Increase line spacing for readability */
+}
+
+h1.project-maincontent a {
+    text-decoration: none; /* Remove underline from links */
+    color:#4d73d3 ; /* Inherit the color from the parent */
+    font-style: italic; /* Make the text italic */
+}
