@@ -3,31 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Writings (Crafted) by Nguyen</title>
+    <title>Writing</title>
     <link rel="icon" type="image/x-icon" href="site-brandings/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script defer src="thoughts.js"></script>
 
-    <!-- Fallback Meta Tags -->
-    <meta property="og:title" content="Default Blog Title" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="DDEEFF11122222" />
     <meta property="og:image" content="site-brandings/default-thumbnail.jpg" />
-    <meta property="og:url" content="https://yourwebsite.com/blog.html" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <script>
-        // Extract URL parameters
-        const params = new URLSearchParams(window.location.search);
-        const postTitle = params.get('title') || 'Default Blog Title';
-        const iframeURL = params.get('iframeURL') || '';
-        const featuredImage = decodeURIComponent(params.get('image') || 'site-brandings/default-thumbnail.jpg');
-        const pageURL = window.location.href;
-
-        // Dynamically update meta tags
-        document.title = postTitle;
-        document.querySelector('meta[property="og:title"]').setAttribute('content', postTitle);
-        document.querySelector('meta[property="og:image"]').setAttribute('content', featuredImage);
-        document.querySelector('meta[property="og:url"]').setAttribute('content', pageURL);
-    </script>
+    <meta property="og:url" content="https://yourwebsite.com/Thoughts/Default-Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="A description of your blog post here." />
 </head>
 <body>
     <div id="loading-screen">
@@ -35,7 +21,8 @@
             <source src="site-brandings/loading-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>    
+    </div>
+    
     <!-- Header -->
     <header>
         <div class="logo">
@@ -53,7 +40,6 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Title Section -->
         <h1 class="title">
             The Writings<br>
             <span>(Crafted) by Nguyen.</span>
@@ -63,9 +49,8 @@
         <div class="tabs">
             <button class="tab active" data-tab="on places i’ve been to">On Places I've Been To</button>
             <button class="tab" data-tab="the little things of life">The Little Things Of Life</button>
-            <button class="tab" data-tab="Growing In This Crazy World">Growing In This Crazy World</button>
-            <button class="tab" data-tab="Some Pieces of Work">Some Pieces of Work</button>
-
+            <button class="tab" data-tab="growing in this crazy world">Growing In This Crazy World</button>
+            <button class="tab" data-tab="some pieces of work">Some Pieces of Work</button>
         </div>
 
         <!-- Posts Container -->

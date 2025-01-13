@@ -33,6 +33,9 @@ async function loadPostsFromGoogleSheet() {
 
         // Automatically display the default active tab after loading posts
         showTab(activeTab);
+
+        // Update meta tags for the first post in the active tab (optional)
+        updateMetaTagsForPost();
     } catch (error) {
         console.error('Error fetching posts:', error);
     }
@@ -62,9 +65,18 @@ function showTab(tabName) {
         `;
 
         postElement.addEventListener('click', () => {
-            // Pass title, iframeURL, and image as URL parameters
-            const blogURL = `blog.html?title=${encodeURIComponent(post.title)}&iframeURL=${encodeURIComponent(post.iframeURL)}&image=${encodeURIComponent(post.image)}`;
-            window.open(blogURL, '_blank'); // Open in a new tab
+            // Construct clean URL using blog title
+            const pageURL = `/Thoughts/${encodeURIComponent(post.title)}`;
+            const fullURL = `${window.location.origin}${pageURL}`;
+
+            // Update meta tags dynamically
+            document.title = post.title;
+            document.querySelector('meta[property="og:title"]').setAttribute('content', post.title);
+            document.querySelector('meta[property="og:image"]').setAttribute('content', post.image);
+            document.querySelector('meta[property="og:url"]').setAttribute('content', fullURL);
+
+            // Navigate to the clean URL
+            window.history.pushState({}, '', fullURL);
         });
 
         postsContainer.appendChild(postElement);
@@ -72,6 +84,26 @@ function showTab(tabName) {
 
     // Initialize observer for fade-in animation
     initFadeInAnimation();
+}
+
+function updateMetaTagsForPost() {
+    const params = new URLSearchParams(window.location.search);
+    const postTitle = decodeURIComponent(params.get('title') || 'Default Blog Title');
+    const post = posts.find(post => post.title === postTitle);
+
+    if (post) {
+        const featuredImage = post.image;
+        const pageURL = `${window.location.origin}/Thoughts/${encodeURIComponent(post.title)}`;
+
+        // Update meta tags
+        document.title = post.title;
+        document.querySelector('meta[property="og:title"]').setAttribute('content', post.title);
+        document.querySelector('meta[property="og:image"]').setAttribute('content', featuredImage);
+        document.querySelector('meta[property="og:url"]').setAttribute('content', pageURL);
+
+        // Update the browser URL
+        window.history.replaceState({}, '', pageURL);
+    }
 }
 
 // Set the active class for the navigation bar based on the current URL
@@ -125,35 +157,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-// Loading screen logic
-const loadingScreen = document.querySelector("#loading-screen");
-const loadingVideo = document.querySelector("#loading-video");
+    // Loading screen logic
+    const loadingScreen = document.querySelector("#loading-screen");
+    const loadingVideo = document.querySelector("#loading-video");
 
-// Reset the video to the beginning on page reload
-loadingVideo.currentTime = 0;
+    // Reset the video to the beginning on page reload
+    loadingVideo.currentTime = 0;
 
-// Listen for the video's metadata to get its duration
-loadingVideo.addEventListener("loadedmetadata", () => {
-    const videoDuration = loadingVideo.duration;
+    // Listen for the video's metadata to get its duration
+    loadingVideo.addEventListener("loadedmetadata", () => {
+        const videoDuration = loadingVideo.duration;
 
-    // Schedule the fade-out 1 second before the video ends
-    setTimeout(() => {
-        // Fade out the loading screen
+        // Schedule the fade-out 1 second before the video ends
+        setTimeout(() => {
+            // Fade out the loading screen
+            loadingScreen.style.opacity = "0";
+
+            // Wait for the fade-out transition to complete before hiding the element
+            setTimeout(() => {
+                loadingScreen.style.display = "none";
+            }, 1000); // Matches the CSS transition duration
+        }, (videoDuration - 1) * 1000); // Trigger fade-out 1 second before the video ends
+    });
+
+    // If the video ends and hasn't faded out, ensure fallback fade-out
+    loadingVideo.addEventListener("ended", () => {
         loadingScreen.style.opacity = "0";
-
-        // Wait for the fade-out transition to complete before hiding the element
         setTimeout(() => {
             loadingScreen.style.display = "none";
         }, 1000); // Matches the CSS transition duration
-    }, (videoDuration - 1) * 1000); // Trigger fade-out 1 second before the video ends
-});
-
-// If the video ends and hasn't faded out, ensure fallback fade-out
-loadingVideo.addEventListener("ended", () => {
-    loadingScreen.style.opacity = "0";
-    setTimeout(() => {
-        loadingScreen.style.display = "none";
-    }, 1000); // Matches the CSS transition duration
-});
-
+    });
 });
