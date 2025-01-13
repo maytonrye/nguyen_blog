@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nguyen Nguyen</title>
+    <title>About</title>
     <link rel="icon" type="image/x-icon" href="site-brandings/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        // Function to detect mobile or tablet devices
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+    
+        // Redirect if a mobile or tablet device is detected
+        if (isMobileDevice()) {
+            alert("This website is only accessible from a desktop browser. Please visit us on your computer.");
+            window.location.href = "https://example.com/blocked.html"; // Replace with your blocked message page URL
+        }
+    </script>
     <div id="loading-screen">
         <video id="loading-video" autoplay muted>
             <source src="site-brandings/loading-video.mp4" type="video/mp4">
@@ -268,24 +280,7 @@
                 </div>
             </div>
         </section>
-        <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="hydration">
-                <p>Stay hydrated! Matcha is a suggestion!</p>
-            </div>
-            <div class="copyright">
-                <p>© Nguyen Nguyen / 2024</p>
-            </div>
-            <div class="social-media">
-                <ul>
-                    <li><a href="mailto:trung.nguyen@uni.minerva.edu" target="_blank"><img src="site-brandings/Email-logo.png" alt="Email"></a></li>
-                    <li><a href="https://www.instagram.com/mayton.rye/" target="_blank"><img src="site-brandings/Instagram-logo.png" alt="Instagram"></a></li>
-                    <li><a href="https://www.youtube.com/watch?v=Wr7QPBkcK98" target="_blank"><img src="site-brandings/YouTube-logo.png" alt="YouTube"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer dat ngay o duoi day-->
 <!-- JavaScript -->
 <script src="about.js"></script>
 </body>
