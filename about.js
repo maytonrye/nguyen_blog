@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbnail: "https://img.youtube.com/vi/432j-xQVmWU/0.jpg"
         },
         {
-            title: "Putting Price Tag on Life",
-            url: "https://www.youtube.com/watch?v=0O2Rq4HJBxw",
-            thumbnail: "https://img.youtube.com/vi/0O2Rq4HJBxw/0.jpg"
-        },
-        {
             title: "Dã Quỳ (song by Nguyên Thảo)",
             url: "https://www.youtube.com/watch?v=D_65UIrjjXg",
             thumbnail: "https://img.youtube.com/vi/D_65UIrjjXg/0.jpg"
+        },
+        {
+            title: "Putting Price Tag on Life",
+            url: "https://www.youtube.com/watch?v=0O2Rq4HJBxw",
+            thumbnail: "https://img.youtube.com/vi/0O2Rq4HJBxw/0.jpg"
         },
         {
             title: "Ru con - Dang Ngoc Long; Plays: Jakob Bangso",
