@@ -22,34 +22,34 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbnail: "https://img.youtube.com/vi/432j-xQVmWU/0.jpg"
         },
         {
-            title: "Principles of Human-Centered Design (Don Norman)",
-            url: "https://www.youtube.com/watch?v=rmM0kRf8Dbk0",
-            thumbnail: "https://img.youtube.com/vi/rmM0kRf8Dbk0/0.jpg"
+            title: "Putting Price Tag on Life",
+            url: "https://www.youtube.com/watch?v=0O2Rq4HJBxw",
+            thumbnail: "https://img.youtube.com/vi/0O2Rq4HJBxw/0.jpg"
         },
         {
-            title: "Video 6 Title",
-            url: "https://www.youtube.com/watch?v=5AQRQFIpjc0",
-            thumbnail: "https://img.youtube.com/vi/5AQRQFIpjc0/0.jpg"
+            title: "Dã Quỳ (song by Nguyên Thảo)",
+            url: "https://www.youtube.com/watch?v=D_65UIrjjXg",
+            thumbnail: "https://img.youtube.com/vi/D_65UIrjjXg/0.jpg"
         },
         {
-            title: "Video 7 Title",
-            url: "https://www.youtube.com/watch?v=5AQRQFIpjc0",
-            thumbnail: "https://img.youtube.com/vi/5AQRQFIpjc0/0.jpg"
+            title: "Ru con - Dang Ngoc Long; Plays: Jakob Bangso",
+            url: "https://www.youtube.com/watch?v=9QzjSK5tbwk",
+            thumbnail: "https://img.youtube.com/vi/9QzjSK5tbwk/0.jpg"
         },
         {
-            title: "Video 8 Title",
-            url: "https://www.youtube.com/watch?v=5AQRQFIpjc0",
-            thumbnail: "https://img.youtube.com/vi/5AQRQFIpjc0/0.jpg"
+            title: "The Central Highlands of Tay Nguyen - Dang Ngoc Long; Plays: Niklas Johansen",
+            url: "https://www.youtube.com/watch?v=xp5KSTsAgAw",
+            thumbnail: "https://img.youtube.com/vi/xp5KSTsAgAw/0.jpg"
         },
         {
-            title: "Video 9 Title",
-            url: "https://www.youtube.com/watch?v=5AQRQFIpjc0",
-            thumbnail: "https://img.youtube.com/vi/5AQRQFIpjc0/0.jpg"
+            title: "Beo Dat May Troi -  Dang Ngoc Long; Plays: Chia Wei-Lin",
+            url: "https://www.youtube.com/watch?v=5tp81f8mGvg",
+            thumbnail: "https://img.youtube.com/vi/5tp81f8mGvg/0.jpg"
         },
         {
-            title: "Video 10 Title",
-            url: "https://www.youtube.com/watch?v=5AQRQFIpjc0",
-            thumbnail: "https://img.youtube.com/vi/5AQRQFIpjc0/0.jpg"
+            title: "Swimming - Flawed Mangoes",
+            url: "https://www.youtube.com/watch?v=5k7ccAEaY0Q",
+            thumbnail: "https://img.youtube.com/vi/5k7ccAEaY0Q/0.jpg"
         }
     ];
 
